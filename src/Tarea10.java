@@ -10,7 +10,7 @@ public class Tarea10{
 
 	//varibles globales
 	int [][] matriz = new int[3][4];
-	int [][] matrizTranspuesta = new int[4][3];
+	int [][] matrizTranspuesta = new int [4][3];
 	Scanner entrada = new Scanner(System.in);
 
 	public Tarea10(){
@@ -34,11 +34,10 @@ public class Tarea10{
 
 	public void obtenerTranspuesta(){
 		
-		for(int i=0; i<4; i++){
+		for(int i=0; i<3; i++){
 			int num;
-			for (int j=0 ;j<3 ;j++) {
-				num = matriz[j][i];
-				matrizTranspuesta[i][j] = num;
+			for (int j=0 ;j<4 ;j++) {
+				matrizTranspuesta[j][i] = matriz[i][j];;
 			}
 		}
 
@@ -53,10 +52,11 @@ public class Tarea10{
 			}
 			System.out.println("");
 		}
+		System.out.println(" \n\n\n");
 
 		for(int i=0; i<4; i++){
-			for(int j=1; j<3; j++){
-				System.out.print("| "+matrizTranspuesta+" |");
+			for(int j=0; j<3; j++){
+				System.out.print("| "+matrizTranspuesta[i][j]+" |");
 			}
 			System.out.println("");
 		}
